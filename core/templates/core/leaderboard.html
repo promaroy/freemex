@@ -1,0 +1,56 @@
+{% extends "core/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+{% if not message %}
+  {% include "core/includes/navbar.html" %}
+{% endif %}
+
+<!--Main layout-->
+<div class="container leaderboard">
+    <br>
+    {% if message %}
+      <h2 class="text-center">{{message.first}}</h1>
+      <h3 class="text-center">{{message.second}}</h2>
+      <br>
+      <hr>
+      <h1 class="text-center">Leaderboard</h1>
+    {% else %}
+      <h1>Leaderboard</h1>
+    {% endif %}
+    <hr>
+    <br>
+
+    <input type="text" id="leaderboard-search" onkeyup="leaderboardSearch()" placeholder="Search for names..">
+
+    <table class="table table-striped leaderboard-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Total Asset</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ player.user.first_name }} {{ player.user.last_name }}</td>
+                <td>{{ player }}</td>
+                <td>{{ player.total_value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+<!--/Main layout-->
+
+{% endblock %}
+
+{% block javascript %}
+
+<script type="text/javascript" src="{% static "js/leaderboard.js" %}"></script>
+
+{% endblock %}

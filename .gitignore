@@ -1,0 +1,9 @@
+*.pyc
+venv
+*.sqlite3
+festcms/media
+.env
+wsgi/static/
+__pycache__
+db.sqlite3-journal
+.DS_Store

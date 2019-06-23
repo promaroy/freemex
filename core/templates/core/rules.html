@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+{% include "core/includes/navbar.html" with current="Rules" %}
+
+<!--Main layout-->
+{% include "core/includes/rules.html" with player=player.user %}
+<!--/Main layout-->
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
