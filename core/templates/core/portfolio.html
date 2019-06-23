@@ -45,10 +45,10 @@
     </div>
     <h1 class="head">Portfolio</h1>
     <hr>
-    <h5>Cash: $<span id="playercash">{{ player.cash }}</span></h5>
-    <h5>Value in Stock: ${{ player.value_in_stocks }}</h5>
+    <h5 style='color:blue'>Cash: $<span id="playercash">{{ player.cash }}</span></h5>
+    <h5 style='color:blue'>Value in Stock: ${{ player.value_in_stocks }}</h5>
     <hr>
-    <h4>Total: {{ player.total_value }}</h4>
+    <h4 style='color:blue'>Total: {{ player.total_value }}</h4>
     <br>
     <br>
     <p class="text-right">Page last updated on: <strong id="last-updated">{% timezone "Asia/Calcutta" %}{{ last_updated }}{% endtimezone %}</strong></p>
@@ -143,7 +143,7 @@
 
     {% endfor %}
 
-    <a href="/market" class="btn btn-lg btn-info">Buy Stocks</a>
+    <a href="/market" class="btn btn-lg btn-warning">Buy Stocks</a>
 </div>
 
 {% endblock %}
