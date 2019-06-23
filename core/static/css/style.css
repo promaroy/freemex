@@ -47,24 +47,26 @@ body {
 /* ------------------------------- Landing page ------------------------------- */
 
 
+
 .landing-page header.landing {
     height: 100vh;
 }
 
 .landing-page header.landing .landing-bg {
     position: absolute;
-    z-index: -999999;
+    z-index: -2;
 
     width: 100%;
     height: 100vh;
 
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/frontpage.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 
-    filter: blur(5px);
+
+
 }
 
 .landing-page header.landing .glug-logo {
@@ -101,7 +103,12 @@ body {
     right: 2em;
   }
 }
-
+.footertxt{
+  border-radius: 10%;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-shadow: 5px 5px 5px;
+  padding: 3px;
+}
 .landing-page header.landing .sponsor-logo {
     position: absolute;
     top: 0;
@@ -112,14 +119,19 @@ body {
 }
 
 .landing-page header.landing .content {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: 50vh;
-    transform: translateY(-50%);
+  position: absolute;
+  bottom:57%;
+  top:0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  padding-top:80px;
+  text-align:center;
 }
 
-.landing-page header.landing .content img.freemex-logo {
+.landing-page header.landing .content. img.freemex-logo {
     z-index: 999;
 
     width: 100%;
@@ -127,45 +139,45 @@ body {
     height: auto;
     padding-right: 15%;
     padding-left: 15%;
-
+    padding-top: 20%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
             filter: drop-shadow(5px 5px 5px #222);
 }
 
 .landing-page header.landing .content .nasdaq-intro {
-    padding-top: 25px;
+    padding-top: 17%;
     padding-bottom: 30px;
     color: #f0f0f0;
     font-size: 1.4em;
     margin-bottom: 0;
 }
 
-.landing-page header.landing .content .login-buttons a.btn {
+.landing-page header.landing .login-buttons a.btn {
     padding: 12px 16px;
 }
 
-.landing-page header.landing .content .login-buttons a.btn .fa {
+.landing-page header.landing  .login-buttons a.btn .fa {
     padding-right: 4px;
 }
 
-.landing-page header.landing .content .login-buttons a.btn-fb {
+.landing-page header.landing  .login-buttons a.btn-fb {
     background-color: #4C69BA;
     background-image: linear-gradient(#4C69BA, #3B55A0);
     text-shadow: 0 -1px 0 #354C8C;
 }
 
-.landing-page header.landing .content .login-buttons a.btn-fb:hover,
-.landing-page header.landing .content .login-buttons a.btn-fb:focus {
+.landing-page header.landing  .login-buttons a.btn-fb:hover,
+.landing-page header.landing  .login-buttons a.btn-fb:focus {
     background-color: #5B7BD5;
     background-image: linear-gradient(#5B7BD5, #4864B1);
 }
 
-.landing-page header.landing .content .login-buttons a.btn-gplus {
+.landing-page header.landing  .login-buttons a.btn-gplus {
     background: #DD4B39;
 }
 
-.landing-page header.landing .content .login-buttons a.btn-gplus:hover,
-.landing-page header.landing .content .login-buttons a.btn-gplus:focus {
+.landing-page header.landing  .login-buttons a.btn-gplus:hover,
+.landing-page header.landing  .login-buttons a.btn-gplus:focus {
     background: #E74B37;
 }
 
@@ -239,6 +251,14 @@ body {
     max-height: 100px; /* any large number (bigger then the .input-requirements list) */
     transition: max-height 1s ease-in;
 }
+.time{
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  border-radius: 10%;
+  padding:3px;
+  box-shadow: 4px 4px 4px;
+}
+
+
 
 
 /* ------------------------------- Navbar -------------------------------------- */
@@ -253,10 +273,23 @@ body {
 .navbar ul li a {
     font-size: 1.25em;
 }
-
-
+.navbar ul li a:hover{
+  background-color: green;}
+.head{
+  background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
+  text-align: center;
+  box-shadow: 6px 6px 6px grey;
+}
 /* ----------------------------- Portfolio and Market ----------------------------- */
-
+.block{
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 8%;
+  padding:1px;
+  text-align: center;
+}
+.block:hover{
+  box-shadow: 6px 6px 6px grey;
+}
 
 .portfolio .card {
     margin-bottom: 2rem;

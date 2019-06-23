@@ -8,7 +8,7 @@
 <!--Main layout-->
 <div class="container portfolio">
     <br>
-    <p class="text-right">Logged in as <strong>{{ player.user }}</strong></p>
+    <p class="text-right"><span class="block">Logged in as <strong>{{ player.user }} <i class='fa fa-smile-o' style='font-size:24px'></i></strong></span></p>
     <p class="text-right">
         <a href="#" class="btn success-color change-username" data-toggle="modal" data-target="#changeUsernameModal" role="button">Change username</a>
     </p>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <h1>Portfolio</h1>
+    <h1 class="head">Portfolio</h1>
     <hr>
     <h5>Cash: $<span id="playercash">{{ player.cash }}</span></h5>
     <h5>Value in Stock: ${{ player.value_in_stocks }}</h5>
@@ -52,7 +52,7 @@
     <br>
     <br>
     <p class="text-right">Page last updated on: <strong id="last-updated">{% timezone "Asia/Calcutta" %}{{ last_updated }}{% endtimezone %}</strong></p>
-    <h1>Your stocks</h1>
+    <h1 class="head">Your stocks</h1>
     <hr>
     <br>
 

@@ -2,9 +2,9 @@
 {% load staticfiles %}
 
 {% block content %}
-{% if not message %}
-  {% include "core/includes/navbar.html" %}
-{% endif %}
+  {% if not message %}
+  {% include "core/includes/navbar.html" with current="Leaderboard" %}
+  {%endif%}
 
 <!--Main layout-->
 <div class="container leaderboard">

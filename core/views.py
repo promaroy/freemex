@@ -181,9 +181,9 @@ def market(request):
 
     context['all_stocks'] = all_stocks
     context['player'] = player
-    context['last_updated'] = all_stocks.last().last_updated
+    #context['last_updated'] = all_stocks.last().last_updated
 
-    return render(request, 'core/market.html', context)
+    return render(request, 'core/market.html')
 
 
 # Handle the leaderboard page view
@@ -286,7 +286,7 @@ def buyStock(request):
                 log.isBought = True
                 log.change = 0
                 log.save()
-                
+
                 response_data['code'] = 0
                 response_data['message'] = 'Transaction Successful'
             except:
@@ -332,7 +332,7 @@ def sellStock(request):
            requestedStockCount <= playerStockList[0].quantity):
             try:
 
-            	
+
 
                 # Update player to stock table
                 playerStock = playerStockList[0]
@@ -350,7 +350,7 @@ def sellStock(request):
                 for j in PlayerStock.objects.filter(player=playerObj):
                     playerObj.value_in_stocks += j.stock.price * j.quantity
                 playerObj.save()
-                
+
                 # add transaction to log
                 log = Log()
                 log.player = playerObj
@@ -361,7 +361,7 @@ def sellStock(request):
                 log.change =   playerStock.invested  +            stockPrice * requestedStockCount  - initial_investment
                 # change   =   market value of remaining stocks + amount at which the stock is sold -cost of all stocks -
                 log.save()
-                
+
                 response_data['code'] = 0
                 response_data['message'] = 'Transaction Successful'
             except:
@@ -398,7 +398,7 @@ def engage(request):
 def transactions(request):
 
     context = {}
-    
+
     playerObj = Player.objects.get(user=request.user)
     logs = Log.objects.filter(player=playerObj)
     logs = sorted(logs, key=lambda a: a.logtime, reverse=True)
@@ -408,4 +408,3 @@ def transactions(request):
 
 
     return render(request, 'core/transactions.html', context)
-
