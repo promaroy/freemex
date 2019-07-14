@@ -8,7 +8,7 @@
 <!--Main layout-->
 <div class="container portfolio">
     <br>
-    <p class="text-right"><span class="block">Logged in as <strong>{{ player.user }} <i class='fa fa-smile-o' style='font-size:24px'></i></strong></span></p>
+    <p class="text-right"><span class="block"><b>HELLO</b><br> {{ player.user }}</span></p>
     <p class="text-right">
         <a href="#" class="btn success-color change-username" data-toggle="modal" data-target="#changeUsernameModal" role="button">Change username</a>
     </p>
@@ -43,16 +43,20 @@
             </div>
         </div>
     </div>
-    <h1 class="head">Portfolio</h1>
+    <div class="row">
+    <div class="col-sm-5">
+    <div class="rulescard">
+  <i class="fa fa-dollar" style="font-size:36px;color:red"></i><h1>  <b>Portfolio</b></h1>
     <hr>
-    <h5 style='color:blue'>Cash: $<span id="playercash">{{ player.cash }}</span></h5>
-    <h5 style='color:blue'>Value in Stock: ${{ player.value_in_stocks }}</h5>
+    <h5>Cash: $<span id="playercash">{{ player.cash }}</span></h5>
+    <h5>Value in Stock: ${{ player.value_in_stocks }}</h5>
     <hr>
-    <h4 style='color:blue'>Total: {{ player.total_value }}</h4>
+    <h4>Total: {{ player.total_value }}</h4>
     <br>
     <br>
-    <p class="text-right">Page last updated on: <strong id="last-updated">{% timezone "Asia/Calcutta" %}{{ last_updated }}{% endtimezone %}</strong></p>
-    <h1 class="head">Your stocks</h1>
+    <p class="text-right">Page last updated on: <strong id="last-updated">{% timezone "Asia/Calcutta" %}{{ last_updated }}{% endtimezone %}</strong></p></div></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">  <div class="rulescard"><i class="fa fa-shopping-bag" style="font-size:36px;color:red"></i> <h1> <b>Your stocks</b></h1>
     <hr>
     <br>
 
@@ -83,7 +87,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div></div></div></div>
 
     <!-- Buy Modal -->
     <div class="modal fade" id="buyModal{{ player_stock.stock.code }}" tabindex="-1" role="dialog" aria-labelledby="buyModalTitle" aria-hidden="true">
@@ -142,8 +146,8 @@
     {% endif %}
 
     {% endfor %}
-
-    <a href="/market" class="btn btn-lg btn-warning">Buy Stocks</a>
+  <br><br><br><br>
+    <a href="/market" class="btn btn-lg btn-primary">Buy Stocks</a>
 </div>
 
 {% endblock %}

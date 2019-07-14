@@ -9,10 +9,11 @@
 <!--Main layout-->
 <div class="container market">
     <br>
-    <h1 class="head">Market</h1>
+    <div class="rulescard">
+    <i class="fas fa-cart-plus" style="font-size:36px;color:red"></i><h1><b>Market</b></h1>
     <hr>
-    <h5 style='color:blue'>Cash in your hand: $<span id="playercash">{{ player.cash }}</span></h5>
-    <br>
+    <h5>Cash in your hand: $<span id="playercash">{{ player.cash }}</span></h5>
+    <br></div><br><br><br>
     <input type="text" id="market-search" onkeyup="marketSearch()" placeholder="Search for stock names..">
     <br><br>
     <p class="text-right">Page last updated on: <strong id="last-updated">{% timezone "Asia/Calcutta" %}{{ last_updated }}{% endtimezone %}</strong></p>
